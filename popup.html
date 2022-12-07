@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <title>webカメラの設定</title>
+    <link rel="stylesheet" href="popup.css" />
+  </head>
+  <body>
+    <p>大きい値を入れるとメモリがパンクします。</p>
+    <br />
+    カメラの画質(初期値960X540)
+    <p>カメラの画質を変更した場合、カメラのリロードを行ってください</p>
+    <div class="row">横：<input type="number" id="inputX" /></div>
+    <div class="row">縦：<input type="number" id="inputY" /></div>
+    <br />
+    送信したい映像の画質(初期値960X540)
+    <div class="row">横：<input type="number" id="outputX" /></div>
+    <div class="row">縦：<input type="number" id="outputY" /></div>
+    <button id="save">Save</button>
+    <script src="popup.js"></script>
+  </body>
+</html>

@@ -1,0 +1,27 @@
+{
+  "version": "0.0.1",
+  "name": "Webcam Clipping",
+  "description": "Webカメラの映像をクリッピングします(google meet)",
+  "manifest_version": 3,
+  "host_permissions": ["https://meet.google.com/*"],
+  "permissions": ["storage", "tabs"],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "js": ["loader.js", "content.js"],
+      "matches": ["https://meet.google.com/*"],
+      "run_at": "document_start"
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": ["main.js"],
+      "matches": ["https://meet.google.com/*"]
+    }
+  ]
+}
